@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "5f6aaa41-d10c-43bb-a7c6-65d687834253",
+		"name": "Clase_Fake_api_python",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26925398"
+	},
+	"item": [
+		{
+			"name": "CreaProducto1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"whisky\",\r\n        \"price\": 10000.00,\r\n        \"description\": \"bebida alcoholica\",\r\n        \"category\": \"Alcohol\",\r\n        \"image\": \"bluelabel.jpg\",\r\n        \"rating\": {\r\n            \"rate\": 9.5,\r\n            \"count\": 99\r\n        }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreaProducto2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Fernandito\",\r\n        \"price\": 780.00,\r\n        \"description\": \"trago\",\r\n        \"category\": \"Alcohol\",\r\n        \"image\": \"manaos_con_vittone.jpg\",\r\n        \"rating\": {\r\n            \"rate\": 5,\r\n            \"count\": 9\r\n        }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreaProducto3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Margarita\",\r\n        \"price\": 1500,\r\n        \"description\": \"trago\",\r\n        \"category\": \"Alcohol\",\r\n        \"image\": \"margarita.jpg\",\r\n        \"rating\": {\r\n            \"rate\": 8,\r\n            \"count\": 80\r\n        }\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/productos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_un_producto",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener_todos_los_productos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/productos",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Producto_entre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/productos?Minimoprecio=1000&Maximoprecio=5000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					],
+					"query": [
+						{
+							"key": "Minimoprecio",
+							"value": "1000"
+						},
+						{
+							"key": "Maximoprecio",
+							"value": "5000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos_Minimo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/productos?Minimoprecio=1000",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					],
+					"query": [
+						{
+							"key": "Minimoprecio",
+							"value": "1000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Productos_mayor",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/productos?Maximoprecio=4500",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"productos"
+					],
+					"query": [
+						{
+							"key": "Maximoprecio",
+							"value": "4500"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar_un_producto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/producto/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"producto",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar_un_Producto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"title\": \"Superfernandito\",\r\n        \"price\": 900.00,\r\n        \"image\": \"Coca_Cola_con_Branca.jpg\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/producto/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"producto",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
